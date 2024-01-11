@@ -26,6 +26,7 @@ function askQuestion(question) {
 // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 console.log(question)
 }
+let response = (candidateAnswer); // assignment of responce//
 
 function gradeQuiz(candidateAnswer) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
