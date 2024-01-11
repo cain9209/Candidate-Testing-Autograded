@@ -5,7 +5,7 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = "Who was the first woman Astronaunt in space? ";
+let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride ";
 let candidateAnswer = "";
 
@@ -30,10 +30,10 @@ console.log("Please submit your answer bellow. ");
 
 function gradeQuiz(candidateAnswer) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === "Sally Ride" ) 
-  console.log("Correct!!!" );
+if (candidateAnswer === correctAnswer ) 
+  console.log("Correct Answer" );
 else {
- console.log("Incorrect", correctAnswer, "is the right answer" );
+ console.log("Incorrect" );
 }
 
  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
