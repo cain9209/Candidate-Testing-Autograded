@@ -28,16 +28,15 @@ console.log("Please submit your answer bellow. ");
 }
 
 
-function gradeQuiz(candidateAnswer)
+function gradeQuiz(candidateAnswer) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer === "Sally Ride") {
-  console.log("Correct");
-}else {
- console.log("Incorrect");
+if (candidateAnswer === "Sally Ride" ) 
+  console.log("Correct!!!" );
+else {
+ console.log("Incorrect", correctAnswer, "is the right answer" );
 }
 
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+ let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
   return grade;
