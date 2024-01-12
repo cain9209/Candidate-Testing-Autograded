@@ -18,19 +18,20 @@ let candidateAnswers;
 
 function askForName() {
 // TODO 1.1b: Ask for candidate's name //
-candidateName = input.question("Please enter your name:") }
+candidateName = input.question("Please enter your name: "); 
+}
 
 function askQuestion() {
 // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-candidateAnswer = input.question("Who was the first American woman in space? ");
+candidateAnswer = input.question(question);
 }
 
-function gradeQuiz(candidateAnswer) {
+function gradeQuiz(candidateAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
-  if (correctAnswer === candidateAnswer) {
-   console.log("Correct");
+  if (candidateAnswer === correctAnswer) {
+   console.log("Correct!");
  } else {
-  console.log("Incorrect");
+  console.log("Incorrect!");
  }
 
  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
