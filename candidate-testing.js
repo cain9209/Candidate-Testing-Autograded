@@ -7,7 +7,7 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
-let candidateAnswer = "Sally Ride";
+let candidateAnswer = "";
 
 
 //TODO: Variables for Part 2
@@ -16,24 +16,22 @@ let correctAnswers;
 let candidateAnswers;
 
 
-function askForName(candidateName) {
+function askForName() {
 // TODO 1.1b: Ask for candidate's name //
-console.log("Hello", candidateName);
-}
+candidateName = input.question("Please enter your name:") }
 
- 
-function askQuestion(question) {
+function askQuestion() {
 // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-console.log(question)
+candidateAnswer = input.question("Who was the first American woman in space? ");
 }
 
 function gradeQuiz(candidateAnswer) {
-// TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer == "Sally Ride") {
-  console.log("Correct Answer");
-} else {
- console.log("Incorrect");
-}
+// TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
+  if (correctAnswer === candidateAnswer) {
+   console.log("Correct");
+ } else {
+  console.log("Incorrect");
+ }
 
  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
@@ -44,7 +42,7 @@ if (candidateAnswer == "Sally Ride") {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log("Hello,", candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
