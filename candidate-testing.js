@@ -27,7 +27,7 @@ let correctAnswers = [
 ];
 
 
-let candidateAnswers = '';
+let candidateAnswers = [];
 
 
 function askForName() {
@@ -38,19 +38,18 @@ candidateName = input.question("Please enter your name: ");
 function askQuestion() {
 // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 candidateAnswer = input.question(question);}
-candidateAnswers = [];
 for (let i = 0; i < questions.length; i++) {
-    const response = prompt(questions[i]);
+    const response = askQuestion(questions[i]);
     userResponses.push(response);
 }
 
-function gradeQuiz(candidateAnswers) {
+function gradeQuiz() {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
-  if (candidateAnswer === correctAnswer) {
-   console.log("Correct!");
- } else {
-  console.log("Incorrect!");
- }
+for (let i = 0; i < questions.length; i++) {
+  console.log(`Question: ${questions[i]}`);
+  console.log(`Your Answer: ${userResponses[i]}`);
+  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+}
 
  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
