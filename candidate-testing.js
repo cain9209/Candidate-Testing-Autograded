@@ -28,7 +28,7 @@ let correctAnswers = [
 ]
 
 
-let candidateAnswers = '';
+let candidateAnswers = candidateAnswer;
 
 
 function askForName() {
@@ -39,8 +39,7 @@ candidateName = input.question("Please enter your name: ");
 function askQuestion() { 
   // ask the candidate questions 1.2b //
 for (let i = 0; i < questions.length; i++) ;
-
-candidateAnswers = input.question(questions);
+candidateAnswer = input.question(questions[0]);
 }
 
 function gradeQuiz() {
