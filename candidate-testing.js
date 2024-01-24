@@ -28,7 +28,7 @@ let correctAnswers = [
 ]
 
 
-let candidateAnswers = candidateAnswer;
+let candidateAnswers = candidateAnswer; // array needs to store data//
 
 
 function askForName() {
