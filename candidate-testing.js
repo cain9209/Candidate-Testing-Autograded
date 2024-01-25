@@ -7,7 +7,7 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
-let candidateAnswer = "";
+let candidateAnswer = [];
 
 
 //TODO: Variables for Part 2
@@ -28,7 +28,7 @@ let correctAnswers = [
 ]
 
 
-let candidateAnswers = candidateAnswer; // array needs to store data//
+let candidateAnswers = candidateAnswer;// array needs to store data//
 
 
 function askForName() {
@@ -40,6 +40,7 @@ function askQuestion() {
   // ask the candidate questions 1.2b //
 for (let i = 0; i < questions.length; i++) 
 candidateAnswer = input.question(questions[i]);
+candidateAnswers.push(candidateAnswer);
 }
 
 function gradeQuiz() {
