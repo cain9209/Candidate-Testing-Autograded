@@ -50,7 +50,7 @@ candidateAnswers.push(candidateAnswer);
 function gradeQuiz(candidateAnswers, correctAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
  let numOfQuizQuestions = questions.length;
- let correctCount = 0;
+ let correctCount = '';
 for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
   console.log(`Your Answer: ${candidateAnswers[i]}`);
@@ -63,17 +63,17 @@ for (let i = 0; i < questions.length; i++) {
 
  let grade = (correctCount / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
   if (grade === 0) {
-      console.log("Grade: 0%");
+      console.log("Failed: 0%");
   } else if (grade === 100) {
-      console.log("Grade: 100%");
-  } else if (grade >= 80) {
-      console.log("Grade: 80%");
-  } else if (grade  >= 60) {
-      console.log("Grade: 60%");
+      console.log("Passes: 100%");
+  } else if (grade >= 20) {
+      console.log("Passed: 20%");
   } else if (grade  >= 40) {
-      console.log("Grade: 40%");
-  } else if (grade  >= 20) {
-      console.log("Grade: 20%");
+      console.log("Failed: 40%");
+  } else if (grade  >= 60) {
+      console.log("Failed: 60%");
+  } else if (grade  >= 80) {
+      console.log("Failed: 80%");
   } 
   return grade;
 }
