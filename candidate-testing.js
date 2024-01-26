@@ -7,12 +7,10 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
-<<<<<<< HEAD
 let candidateAnswer = "";
-let correctCount = 0;
-=======
-let candidateAnswer = [];
->>>>>>> 0147f78180947238ae210dea35f6da095f3a8387
+
+
+
 
 
 //TODO: Variables for Part 2
@@ -46,7 +44,7 @@ function askQuestion() {
 for (let i = 0; i < questions.length; i++) {
 candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
-}
+ }
 }
 
 function gradeQuiz(candidateAnswers, correctAnswers) {
@@ -57,25 +55,27 @@ for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
   console.log(`Your Answer: ${candidateAnswers[i]}`);
   console.log(`Correct Answer: ${correctAnswers[i]}\n`);
-  
-  if (candidateAnswers[i].toLowerCase() === correctAnswer[i].toLowerCase()) {
+
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
     correctCount++;
   }
 }
 
- let grade = (correctAnswers / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
-    if (grade < 20) {
-      console.log("Grade: 20%");
-  } else if (grade  < 40) {
-      console.log("Grade: 40%");
-  } else if (grade  < 60) {
-      console.log("Grade: 60%");
-  } else if (grade  < 80) {
-      console.log("Grade: 80%");
-  } else if (grade  <= 100) {
+ let grade = (correctCount / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
+  if (grade === 0) {
+      console.log("Grade: 0%");
+  } else if (grade === 100) {
       console.log("Grade: 100%");
+  } else if (grade >= 80) {
+      console.log("Grade: 80%");
+  } else if (grade  >= 60) {
+      console.log("Grade: 60%");
+  } else if (grade  >= 40) {
+      console.log("Grade: 40%");
+  } else if (grade  >= 20) {
+      console.log("Grade: 20%");
   } 
-  return grade 
+  return grade;
 }
 
 
