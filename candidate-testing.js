@@ -8,6 +8,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
+let correctCount = 0;
 
 
 //TODO: Variables for Part 2
@@ -42,26 +43,42 @@ for (let i = 0; i < questions.length; i++)
 candidateAnswer = input.question(questions[i]);
 }
 
-function gradeQuiz() {
+function gradeQuiz(candidateAnswers, correctAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
- for (let i = 0; i < questions.length; i++) {
+ let numOfQuizQuestions = questions.length;
+ let correctCount = 0;
+for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
   console.log(`Your Answer: ${candidateAnswer[i]}`);
   console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+  
+  if (candidateAnswers[i].toLowerCase() === correctAnswer[i].toLowerCase()) {
+    correctCount++;
+  }
 }
 
- let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
-
-  return grade;
+ let grade = (correctAnswers / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
+    if (grade < 20) {
+      console.log("Grade: 20%");
+  } else if (grade  < 40) {
+      console.log("Grade: 40%");
+  } else if (grade  < 60) {
+      console.log("Grade: 60%");
+  } else if (grade  < 80) {
+      console.log("Grade: 80%");
+  } else if (grade  <= 100) {
+      console.log("Grade: 100%");
+  } 
+  return grade 
 }
+
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
    console.log("Hello,", candidateName);
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  gradeQuiz(candidateAnswers, correctAnswers);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
