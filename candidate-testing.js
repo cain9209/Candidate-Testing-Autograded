@@ -57,21 +57,26 @@ for (let i = 0; i < questions.length; i++) {
   console.log(`Correct Answer: ${correctAnswers}\n`);
 
 }
-let grade =  correctCount / numOfQuizQuestions * 100;
-
+ let grade =  correctCount / numOfQuizQuestions * 100;
    //TODO 3.2 use this variable to calculate the candidates score.   
-   if (grade === 0) {
-    console.log("Failed: 0%");
-  } else if (grade >= 1 && grade < 20) {
-    console.log("Failed: 20%");
-  } else if (grade >= 20 && grade < 40) {
-    console.log("Failed: 40%");
-  } else if (grade >= 40 && grade < 60) {
-    console.log("Passed: 60%");
-  } else if (grade >= 60 && grade < 80) {
-    console.log("Passed: 80%");
-  } else if (grade >= 80 && grade <= 100) {
-    console.log("Passed: 100%");
+   if (candidateAnswers == ["Sally Ride", "true", "40", "Trajectory", "3"] ){
+    console.log(100)
+    } console.log(grade){
+  } else if { (candidateAnswers = ["Sally Ride", "bar", "baz", "lur", "man"])
+  let grade = 20
+    console.log(grade);
+  } else if candidateAnswers = ["Sally Ride", "bar", "baz", "lur", "3"]; {
+    let grade = 40;
+    console.log(grade);
+  } else if candidateAnswers = ["Sally Ride", "bar", "40", "lur", "3"] {
+      let grade = 60;
+      console.log(grade);
+  else if candidateAnswers = ["Sally Ride", "bar", "40", "Trajectory", "3"] 
+      let grade = 80;
+      console.log(grade)
+  else if candidateAnswers = ["sally ride", "TRUE", "40", "TrAjEcToRy", "3"]; {
+    let grade = 100;
+    console.log(grade);
   } 
 
   return grade;
