@@ -64,16 +64,16 @@ for (let i = 0; i < questions.length; i++) {
  let grade = (correctCount / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
   if (grade === 0) {
       console.log("Failed: 0%");
-  } else if (grade === 100) {
-      console.log("Passes: 100%");
-  } else if (grade >= 20) {
-      console.log("Passed: 20%");
-  } else if (grade  >= 40) {
+  } else if (grade === 20) {
+      console.log("Failed: 20%");
+  } else if (grade === 40) {
       console.log("Failed: 40%");
-  } else if (grade  >= 60) {
+  } else if (grade  === 60) {
       console.log("Failed: 60%");
-  } else if (grade  >= 80) {
-      console.log("Failed: 80%");
+  } else if (grade  === 80) {
+      console.log("Passed: 80%");
+  } else if (grade  === 100) {
+      console.log("Passed: 100%");
   } 
   return grade;
 }
