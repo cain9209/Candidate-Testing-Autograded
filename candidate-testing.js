@@ -50,41 +50,40 @@ candidateAnswers.push(candidateAnswer);
 function gradeQuiz(candidateAnswers, correctAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
  let numOfQuizQuestions = questions.length;
- let correctCount = '';
+ let correctCount = 0;
 for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
   console.log(`Your Answer: ${candidateAnswers[i]}`);
   console.log(`Correct Answer: ${correctAnswers}\n`);
 
-  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-    correctCount++;
-  }
 }
+let grade =  correctCount / numOfQuizQuestions * 100;
 
- let grade = (correctCount / numOfQuizQuestions) * 100;  //TODO 3.2 use this variable to calculate the candidates score.   
-  if (grade === 0) {
-      console.log("Failed: 0%");
-  } else if (grade === 20) {
-      console.log("Failed: 20%");
-  } else if (grade === 40) {
-      console.log("Failed: 40%");
-  } else if (grade  === 60) {
-      console.log("Failed: 60%");
-  } else if (grade  === 80) {
-      console.log("Passed: 80%");
-  } else if (grade  === 100) {
-      console.log("Passed: 100%");
+   //TODO 3.2 use this variable to calculate the candidates score.   
+   if (grade === 0) {
+    console.log("Failed: 0%");
+  } else if (grade >= 1 && grade < 20) {
+    console.log("Failed: 20%");
+  } else if (grade >= 20 && grade < 40) {
+    console.log("Failed: 40%");
+  } else if (grade >= 40 && grade < 60) {
+    console.log("Passed: 60%");
+  } else if (grade >= 60 && grade < 80) {
+    console.log("Passed: 80%");
+  } else if (grade >= 80 && grade <= 100) {
+    console.log("Passed: 100%");
   } 
-  return grade;
-}
 
+  return grade;
+
+}
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
    console.log("Hello,", candidateName);
   askQuestion();
-  gradeQuiz(candidateAnswers, correctAnswers);
+  gradeQuiz(candidateAnswers.toLowerCase, correctAnswers.toLowerCase);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
