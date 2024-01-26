@@ -7,8 +7,12 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
+<<<<<<< HEAD
 let candidateAnswer = "";
 let correctCount = 0;
+=======
+let candidateAnswer = [];
+>>>>>>> 0147f78180947238ae210dea35f6da095f3a8387
 
 
 //TODO: Variables for Part 2
@@ -29,7 +33,7 @@ let correctAnswers = [
 ]
 
 
-let candidateAnswers = candidateAnswer;
+let candidateAnswers = [];
 
 
 function askForName() {
@@ -39,8 +43,10 @@ candidateName = input.question("Please enter your name: ");
 
 function askQuestion() { 
   // ask the candidate questions 1.2b //
-for (let i = 0; i < questions.length; i++) 
+for (let i = 0; i < questions.length; i++) {
 candidateAnswer = input.question(questions[i]);
+candidateAnswers.push(candidateAnswer);
+}
 }
 
 function gradeQuiz(candidateAnswers, correctAnswers) {
@@ -49,7 +55,7 @@ function gradeQuiz(candidateAnswers, correctAnswers) {
  let correctCount = 0;
 for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
-  console.log(`Your Answer: ${candidateAnswer[i]}`);
+  console.log(`Your Answer: ${candidateAnswers[i]}`);
   console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   
   if (candidateAnswers[i].toLowerCase() === correctAnswer[i].toLowerCase()) {
