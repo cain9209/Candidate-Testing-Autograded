@@ -53,30 +53,35 @@ function gradeQuiz(candidateAnswers, correctAnswers) {
 for (let i = 0; i < questions.length; i++) {
   console.log(`Question: ${questions[i]}`);
   console.log(`Your Answer: ${candidateAnswers[i]}`);
-  console.log(`Correct Answer: ${correctAnswers}\n`);
-
+  console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+ 
 }
  let numOfQuizQuestions = questions.length;
  let correctCount = 0;
- let grade =  correctCount / numOfQuizQuestions * 100;
+  let grade =  correctCount / numOfQuizQuestions * 100;
+  console.log(`Your Grade is: ${grade}`);
    //TODO 3.2 use this variable to calculate the candidates score.   
    if (grade === 0) {
-    console.log("Failed: 0%"); 
-  } else if (grade === 1) {
-    console.log("Failed: 20%") 
-  } else if (grade === 2) {
-    console.log("Failed: 40%")
-  } else if (grade === 3) {
-    console.log("Failed: 60%");
-  } else if (grade === 80) {
-    console.log("Passed: 80%");
+    return("Failed: 0%"); 
   } else if (grade === 100) {
-    console.log("Passed: 100%");
-  } 
-  return grade;
+    return("Passed: 100%") 
+  } else if (grade === 20) {
+    return("Failed: 20%")
+  } else if (grade === 40) {
+    return("Failed: 40%");
+  } else if (grade === 60) {
+    return("Failed: 60%");
+  } else if (grade === 80) {
+    return("Passed: 80%");
+  } else {
+    return "please try again";
+  }
   
-
 }
+
+  
+ 
+
 
 
 
