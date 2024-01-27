@@ -60,6 +60,7 @@ for (let i = 0; i < questions.length; i++) {
  let correctCount = 0;
   let grade =  correctCount / numOfQuizQuestions * 100;
   console.log(`Your Grade is: ${grade}`);
+  // need a statement for toLowerCase and for correct count++//
    //TODO 3.2 use this variable to calculate the candidates score.   
    if (grade === 0) {
     return("Failed: 0%"); 
