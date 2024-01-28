@@ -8,7 +8,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-
+let correctCount = '';
 
 
 
@@ -33,24 +33,27 @@ candidateName = input.question("Please enter your name: ");
 function askQuestion() { 
 for (let i = 0; i < questions.length; i++) {
 candidateAnswer = input.question(questions[i]);
-candidateAnswers.push(candidateAnswer);
+candidateAnswers.push(candidateAnswer.toLowerCase());
  }
 }
 
-function gradeQuiz(candidateAnswers, correctAnswers) {
+function gradeQuiz(candidateAnswers) {
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //  
 console.log(`1.${questions[0]} ${candidateName} answered: ${candidateAnswers[0]}. Correct answer:${correctAnswers[0]}\n
 2.${questions[1]} ${candidateName} answered: ${candidateAnswers[1]}. Correct answer:${correctAnswers[1]}\n
 3.${questions[2]} ${candidateName} answered: ${candidateAnswers[2]}. Correct answer:${correctAnswers[2]}\n
 4.${questions[3]} ${candidateName} answered: ${candidateAnswers[3]}. Correct answer:${correctAnswers[3]}\n
 5.${questions[4]} ${candidateName} answered: ${candidateAnswers[4]}. Correct answer:${correctAnswers[4]}\n`)
-}
+
   //TODO 3.2 use this variable to calculate the candidates score.   
 //let grade =  (correctCount / 5) * 100;
-  
- 
+  for(i=0;i<questions.lengthj;i++){
+    if(candidateAnswers[i] === toLowerCase(correctAnswers[i])){
+      correctCount++;
+    } 
+  }
+}
 //return grade;
-
 
 
 function runProgram() {
@@ -58,7 +61,7 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log("Hello,", candidateName);
   askQuestion();
-  gradeQuiz();
+  gradeQuiz(this.candidateAnswers);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
