@@ -8,7 +8,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let correctCount = '';
+let correctCount = 0;
 
 
 
@@ -47,14 +47,16 @@ console.log(`1.${questions[0]} ${candidateName} answered: ${candidateAnswers[0]}
 
   //TODO 3.2 use this variable to calculate the candidates score.   
 //let grade =  (correctCount / 5) * 100;
-  for(i=0;i<questions.lengthj;i++){
-    if(candidateAnswers[i] === toLowerCase(correctAnswers[i])){
-      correctCount++;
+  for(i=0;i<questions.length;i++){
+    if(candidateAnswers[i] === correctAnswers[i].toLowerCase()){
+      correctCount = correctCount + 1
     } 
   }
+//return grade 
+let grade = (correctCount / questions.length) * 100;
+console.log(grade)
+return grade;
 }
-//return grade;
-
 
 function runProgram() {
   askForName();
