@@ -57,7 +57,10 @@ function gradeQuiz(candidateAnswers) {
   //return grade 
   console.log('pre grading', correctCount, questions.length)
   let grade = (correctCount / questions.length) * 100;
-  console.log("function", grade)
+  if(grade >= 80)
+  console.log("Passed")
+  else console.log("Failed")
+  console.log(`Grade Percentage ${grade}%`)
   return grade;
 }
 
